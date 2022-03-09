@@ -7,7 +7,7 @@
 - Definir arquitetura - OK; 
 - Adicionar retrofit - OK;
 - Adicionar Koin - OK;
-- Adicionar banco de dados ROOM: TODO;
+- Adicionar banco de dados ROOM: OK;
 - Criar Layout Splash Screen: TODO; 
 - Criar package MODEL - TODO;
 - Criar package REPOSITORY - TODO;

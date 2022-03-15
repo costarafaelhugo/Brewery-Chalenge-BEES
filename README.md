@@ -8,7 +8,4 @@
 - Adicionar retrofit - OK;
 - Adicionar Koin - OK;
 - Adicionar banco de dados ROOM: OK;
-- Criar Layout Splash Screen: TODO; 
-- Criar package MODEL - TODO;
-- Criar package REPOSITORY - TODO;
-- Criar package ViewModel - TODO; 
+- Criar Layout Splash Screen: OK; 

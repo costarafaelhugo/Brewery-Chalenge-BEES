@@ -6,6 +6,63 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/black"
+        android:elevation="4dp"
+        android:layout_marginStart="0dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:contentInsetStartWithNavigation="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/beer_icon_toolbar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:titleTextColor="@color/yellow_bees">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/yellow_bees"
+            android:textSize="20sp"
+            style="bold"
+            android:fontFamily="@font/quicksand_bold"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="110dp">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/favorite_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:navigationIcon="@drawable/star_icon_toolbar" />
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/icon_item"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="0dp"
+                app:navigationIcon="@drawable/heart_icon_toolbar"
+                app:layout_constraintStart_toEndOf="@id/favorite_icon"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="55dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

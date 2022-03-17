@@ -3,4 +3,5 @@
     <string name="brewery_bees_title">Brewery Bees</string>
     <string name="welcome_txt">Welcome!</string>
     <string name="search_brewery_txt">Find your favorite breweries</string>
+    <string name="use_current_local"><u>Use current local</u></string>
 </resources>

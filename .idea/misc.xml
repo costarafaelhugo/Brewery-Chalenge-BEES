@@ -5,7 +5,9 @@
       <map>
         <entry key="app/src/main/res/drawable/ic_gps_fixed_24.xml" value="0.11458333333333333" />
         <entry key="app/src/main/res/drawable/splash_bg.xml" value="0.11510416666666666" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.3333333333333333" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.15" />
+        <entry key="app/src/main/res/layout/breweries_card_top_ten.xml" value="0.15942028985507245" />
+        <entry key="app/src/main/res/layout/fragment_breweryes_card_top.xml" value="0.1" />
       </map>
     </option>
   </component>

@@ -3,8 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="wrap_content"
-    android:layout_width="match_parent"
+    android:layout_width="160dp"
+    android:layout_height="250dp"
     android:layout_marginStart="6dp"
     android:layout_marginEnd="6dp"
     tools:showIn="@layout/fragment_breweryes_card_top"
@@ -14,8 +14,8 @@
 
     <androidx.cardview.widget.CardView
         app:cardUseCompatPadding="true"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
+        android:layout_width="160dp"
+        android:layout_height="250dp"
         android:layout_marginStart="6dp"
         android:layout_marginEnd="6dp"
         app:cardCornerRadius="8dp"
@@ -28,12 +28,12 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_width="160dp"
+            android:layout_height="250dp">
 
         <ImageView
             android:id="@+id/background_photo"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="120dp"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toEndOf="parent"

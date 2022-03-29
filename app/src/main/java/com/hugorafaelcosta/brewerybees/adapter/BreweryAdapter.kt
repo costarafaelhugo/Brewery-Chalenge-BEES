@@ -4,50 +4,60 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.hugorafaelcosta.brewerybees.R
-import com.hugorafaelcosta.brewerybees.database.models.Brewery
+import com.hugorafaelcosta.brewerybees.database.models.BreweryModel
 import kotlinx.android.synthetic.main.breweries_card_top_ten.view.*
 
-class BreweryAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
+class BreweryAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    private var items : List<Brewery> = ArrayList()
+    private var items: List<BreweryModel> = ArrayList()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
 
         return BreweryViewHolder(
-            LayoutInflater.from(parent.context).inflate(R.layout.breweries_card_top_ten, parent, false)
+            LayoutInflater.from(parent.context)
+                .inflate(R.layout.breweries_card_top_ten, parent, false)
         )
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        when(holder){
-            is BreweryViewHolder->{
-                holder.bind(items[position])
+        when (holder) {
+            is BreweryViewHolder -> {
+                holder.bindView(items[position])
             }
         }
     }
 
     override fun getItemCount(): Int {
-       return items.size
+        return items.size
     }
 
-    fun setDataSet(brewerys: List<Brewery>){
-         this.items = brewerys
+    fun setDataSet(brewerys: List<BreweryModel>) {
+        this.items = brewerys
     }
 
 
     class BreweryViewHolder constructor(
-        itemView : View
-    ): RecyclerView.ViewHolder(itemView){
+        itemView: View
+    ) : RecyclerView.ViewHolder(itemView) {
 
-        private val breweryName =  itemView.brewery_name
-        private val breweryRate =  itemView.brewery_rate
-        private val breweryType =  itemView.brewery_type_text
+        fun bindView(item: BreweryModel?) = with(itemView) {
 
-        fun bind(brewery: Brewery){
-            breweryName.text = brewery.name
-            breweryRate.text = brewery.size_evaluations.toString()
-            breweryType.text = brewery.type
+            val brewaryImage = itemView.background_photo
+            val breweryName = itemView.brewery_name
+            val breweryRate = itemView.brewery_rate
+            val breweryType = itemView.brewery_type_text
+
+            fun bind(brewery: BreweryModel) {
+                item?.let {
+
+                    Glide.with(itemView.context).load(it.photo).into(brewaryImage)
+                    breweryName.text = "${breweryName}"
+                    breweryRate.text = "${breweryRate}"
+                    breweryType.text = "${breweryType}"
+                }
+            }
         }
     }
 }

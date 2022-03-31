@@ -1,4 +1,4 @@
-package com.hugorafaelcosta.brewerybees.database.daos
+package com.hugorafaelcosta.brewerybees.rest
 
 import com.hugorafaelcosta.brewerybees.database.models.BreweryModel
 import retrofit2.Call

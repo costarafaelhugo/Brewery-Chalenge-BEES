@@ -52,7 +52,7 @@ class BreweryAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
             fun bind(brewery: BreweryModel) {
                 item?.let {
 
-                    Glide.with(itemView.context).load(it.photo).into(brewaryImage)
+                    Glide.with(itemView.context).load(it.photos).into(brewaryImage)
                     breweryName.text = "${breweryName}"
                     breweryRate.text = "${breweryRate}"
                     breweryType.text = "${breweryType}"

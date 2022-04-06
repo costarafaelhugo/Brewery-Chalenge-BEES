@@ -14,7 +14,7 @@ interface BreweryInterface {
         private val retrofitService: BreweryInterface by lazy {
 
             val retrofit = Retrofit.Builder()
-                .baseUrl("https://bootcamp-mobile-01.eastus.cloudapp.azure.com/breweries/")
+                .baseUrl("https://bootcamp-mobile-01.eastus.cloudapp.azure.com/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
 

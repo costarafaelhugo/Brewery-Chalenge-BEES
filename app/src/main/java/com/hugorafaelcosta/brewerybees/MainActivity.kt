@@ -31,6 +31,10 @@ class MainActivity : AppCompatActivity() {
         this.breweryAdapter.setDataSet(dataSource)
     }
 
+    private fun showAPIData(){
+        val data =
+    }
+
     private fun initRecyclerView() {
         this.breweryAdapter = BreweryAdapter()
 

@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.hugorafaelcosta.brewerybees.R
 import com.hugorafaelcosta.brewerybees.database.models.BreweryModel
+import com.hugorafaelcosta.brewerybees.rest.BreweryInterface
 import kotlinx.android.synthetic.main.breweries_card_top_ten.view.*
 
 class BreweryAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {

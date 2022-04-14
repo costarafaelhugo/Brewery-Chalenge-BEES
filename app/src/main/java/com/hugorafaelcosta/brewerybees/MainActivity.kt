@@ -2,16 +2,17 @@ package com.hugorafaelcosta.brewerybees
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.hugorafaelcosta.DataSource.Companion.createDataSet
 import com.hugorafaelcosta.brewerybees.adapter.BreweryAdapter
+import com.hugorafaelcosta.brewerybees.repository.BreweryRepository
+import com.hugorafaelcosta.brewerybees.rest.BreweryInterface
+import com.hugorafaelcosta.brewerybees.viewModel.BreweryMainViewModel
 import kotlinx.android.synthetic.main.activity_main.*
-import javax.sql.DataSource
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var breweryAdapter: BreweryAdapter
+    private val viewModel = BreweryMainViewModel(BreweryRepository())
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,16 +25,14 @@ class MainActivity : AppCompatActivity() {
 
         initRecyclerView()
         addDataSource()
+        viewModel.getBreweryList()
     }
 
     private fun addDataSource() {
-       val dataSource = com.hugorafaelcosta.DataSource.createDataSet()
-        this.breweryAdapter.setDataSet(dataSource)
+       val dataSource = BreweryInterface.getInstance()
+      // this.breweryAdapter.setDataSet()
     }
 
-    private fun showAPIData(){
-        val data =
-    }
 
     private fun initRecyclerView() {
         this.breweryAdapter = BreweryAdapter()
@@ -44,5 +43,7 @@ class MainActivity : AppCompatActivity() {
 //        recyclerview_main.layoutManager =LinearLayoutManager(this@MainActivity)
         recyclerview_main.adapter = this.breweryAdapter
     }
+
+
 
 }

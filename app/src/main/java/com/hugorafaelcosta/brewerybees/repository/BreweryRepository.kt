@@ -4,5 +4,5 @@ import com.hugorafaelcosta.brewerybees.rest.BreweryInterface
 
 class BreweryRepository {
     //https://bootcamp-mobile-01.eastus.cloudapp.azure.com/breweries
-    fun getBrewery() = BreweryInterface.getInstance().getBrewery()
+    suspend fun getBrewery() = BreweryInterface.getInstance().getBrewery()
 }

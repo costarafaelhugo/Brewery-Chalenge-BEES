@@ -16,29 +16,35 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        Thread.sleep(2000)
+//        Thread.sleep(2000)
 
         setTheme(R.style.Theme_BreweryBEES)
 
         setContentView(R.layout.activity_main)
 
         initRecyclerView()
-        addDataSource()
+//        addDataSource()
         viewModel.getBreweryList()
+
+        viewModel.brewery.observe(this){brewerys ->
+            if (brewerys != null) {
+                this.breweryAdapter.setDataSet(brewerys)
+            }
+        }
     }
 
-    private fun addDataSource() {
-       val dataSource = BreweryInterface.getInstance()
-      // this.breweryAdapter.setDataSet()
-    }
+//    private fun addDataSource() {
+//       val dataSource = BreweryInterface.getInstance()
+//
+//      // this.breweryAdapter.setDataSet()
+//    }
 
 
     private fun initRecyclerView() {
         this.breweryAdapter = BreweryAdapter()
 
         val horizontalLayoutManagaer =LinearLayoutManager(this@MainActivity, LinearLayoutManager.HORIZONTAL, false)
-        recyclerview_main.setLayoutManager(horizontalLayoutManagaer)
+        recyclerview_main.layoutManager = horizontalLayoutManagaer
 
 //        recyclerview_main.layoutManager =LinearLayoutManager(this@MainActivity)
         recyclerview_main.adapter = this.breweryAdapter

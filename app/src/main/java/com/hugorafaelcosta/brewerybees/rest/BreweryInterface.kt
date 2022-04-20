@@ -9,7 +9,7 @@ import retrofit2.http.GET
 
 interface BreweryInterface {
     @GET("/breweries/topTen")
-    suspend fun getBrewery(): Response <List<BreweryModel>>
+    fun getBrewery(): Call <List<BreweryModel>>
 
     companion object {
         private val retrofitService: BreweryInterface by lazy {

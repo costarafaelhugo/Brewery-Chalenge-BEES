@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.hugorafaelcosta.brewerybees.R
@@ -52,7 +53,7 @@ class BreweryAdapter : RecyclerView.Adapter<BreweryAdapter.BreweryViewHolder>() 
             val breweryType = itemView.brewery_type_text
 
             item.let {
-                Glide.with(itemView.context).load(it.photos).into(brewaryImage)
+//                Glide.with(itemView.context).load(it.photos).into(brewaryImage)
                 breweryName.text = it.name
                 breweryRate.text = it.sizeEvaluations.toString()
                 breweryType.text = it.breweryType

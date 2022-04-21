@@ -9,6 +9,7 @@
         <entry key="app/src/main/res/layout/breweries_card_top_ten.xml" value="0.25" />
         <entry key="app/src/main/res/layout/brewery_item.xml" value="0.20729166666666668" />
         <entry key="app/src/main/res/layout/fragment_breweryes_card_top.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/layout_top_ten.xml" value="0.5" />
       </map>
     </option>
   </component>

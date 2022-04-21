@@ -25,4 +25,3 @@ data class BreweryModel(
     val websiteUrl: String? = null,
     val photos: List<String>? = null,
 )
-
